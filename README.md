@@ -27,7 +27,7 @@ Ollama is required for running the AI model locally.
    ```
 3. Pull the required model:
    ```sh
-   ollama pull <model-name>
+   ollama pull llama3.2:latest 
    ```
 
 ### 2. Set Up Langflow
@@ -50,7 +50,7 @@ Langflow orchestrates the AI model to process policy documents efficiently.
 5. **Configure API Path**:
    - In the `langflow-api.ts` file under the `service` folder of the extension, update the API path to match your local Langflow API:
      ```typescript
-     const LANGFLOW_API_URL = "http://localhost:7860/api"; // Update if needed
+     const API_ENDPOINT = "http://localhost:7860/api"; // Update if needed
      ```
 
 ### 3. Install & Build the Chrome Extension
@@ -85,15 +85,20 @@ The extension is built using React and TypeScript with Vite.
 
 ## Final Result
 
-(Space for screenshots and final output images)
+// TODO: Add screenshots and final output images
 
 ---
+
+## Future scope
+There is a lot of work pending. 
+I am going to fine tune the model - contacted a lawyer friend of mine
+Then add everything into a docker
+Then host it on a cloud
+Create a website and market it to my friends
 
 ### Contributions & Feedback
 
 Feel free to contribute, suggest improvements, or report issues via GitHub!
 
 ---
-
-**License:** [MIT License](LICENSE)
 
