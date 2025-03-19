@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Policy Scanner",
+  "version": "1.0.0",
+  "description": "Scans terms and policy pages for important information",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [ 
+        "*://*/terms*",
+        "*://*/tos*",
+        "*://*/privacy*",
+        "*://*/policy*",
+        "*://*/legal*",
+        "*://*/user-agreement*",
+        "*://*/eula*",
+        "*://*/gdpr*",
+        "*://*/compliance*",
+        "*://*/disclaimer*",
+        "*://*/security*",
+        "*://*/cookies*"
+    ],
+      "js": ["src/content.tsx"]
+    }
+  ]
+}
